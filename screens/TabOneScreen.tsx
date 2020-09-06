@@ -67,7 +67,7 @@ export default class TabOneScreen extends React.Component<Props, State> {
     let timer = setInterval(()=> this.getData(), 5000)
   }
   getHealthColor(){
-    let limit = moment.duration(105, 'd').asMilliseconds();
+    let limit = moment.duration(105, 'm').asMilliseconds();
     let percent = parseFloat(this.state.millis) / limit 
     if(percent <= 0.80){
       return '#00ff00'
@@ -80,7 +80,7 @@ export default class TabOneScreen extends React.Component<Props, State> {
     }
   }
   getHealthStatus(){
-    let limit = moment.duration(105, 'd').asMilliseconds();
+    let limit = moment.duration(105, 'm').asMilliseconds();
     let percent = parseFloat(this.state.millis) / limit 
     if(percent <= 0.80){
       return 'Good'
